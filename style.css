@@ -1,0 +1,117 @@
+/* Root */
+:root {
+    --primary-text-color: black;
+    --secondary-text-color: slategray;
+    --accent-text-color: seagreen;
+
+    --main-background-color: bisque;
+    --card-background-color: white;
+    --button-background-color: seagreen;
+}
+
+/* Universal */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Content */
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    background-color: var(--main-background-color);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card-background-color);
+    border-radius: 25px;
+    margin: auto;
+}
+
+.image-container img {
+    height: 500px;
+    width: auto;
+    margin: auto;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.text-container {
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+p span {
+    font-size: 1.4rem;
+    letter-spacing: 5px;
+}
+
+h1 {
+    font-size: 3.8rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    color: var(--accent-text-color);
+    margin-bottom: 20px;
+}
+
+.price h2 {
+    font-size: 3.0rem;
+    margin-right: 20px;
+}
+
+.price p {
+    font-size: 1.2rem;
+    text-decoration: line-through;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--card-background-color);
+    background-color: var(--button-background-color);
+    border: none;
+    border-radius: 25px;
+    padding-top: 15px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 767px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .image-container img {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 25px;
+        height: 260px;
+        content: url(images/image-mobile.jpg);
+    }
+
+    .text-container {
+        width: 350px;
+    }
+}
